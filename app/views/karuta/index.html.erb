@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="header">
-  <img src="img/search.gif">
+  <%= image_tag("search.gif") %>
   <h1>ドラえもんカルタ</h1>
   </div>
   <center>
@@ -25,26 +25,26 @@
           <div class="karutaData"><%= @answer_text[2] %></div>
         </td>
         <td>
-          <div class="karuta">甘酸っぱい<img src="img/flip.png"></div>
-          <div class="karutaData">え？<img src="img/wrong.png"></div>
+          <div class="karuta">甘酸っぱい<%= image_tag("flip.png") %></div>
+          <div class="karutaData">え？<img src="wrong.png"></div>
         </td>
         <td>
-          <div class="karuta">おおむね赤<img src="img/hi.png"></div>
-          <div class="karutaData">え？<img src="img/wrong.png"></div>
+          <div class="karuta">おおむね赤<%= image_tag("hi.png") %></div>
+          <div class="karutaData">え？  <%= image_tag("wrong.png") %></div>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="karuta">なつみかん<img src="img/mello.png"></div>
-          <div class="karutaData">え？<img src="img/wrong.png"></div>
+          <div class="karuta">なつみかん<%= image_tag("mello.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
         </td>
         <td>
-          <div class="karuta">かなり酸っぱいと思う<img src="img/run.png"></div>
-          <div class="karutaData">え？<img src="img/wrong.png"></div>
+          <div class="karuta">かなり酸っぱいと思う<%= image_tag("run.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
         </td>
         <td>
-          <div class="karuta">たいてい黄色<img src="img/sleep.png"></div>
-          <div class="karutaData">え？<img src="img/wrong.png"></div>
+          <div class="karuta">たいてい黄色<%= image_tag("sleep.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
         </td>
       </tr>
     </table>
