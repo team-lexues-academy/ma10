@@ -1,3 +1,99 @@
-// Place all the styles related to the karuta controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  background: blue;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  position:0;
+  float:right;
+  margin-right:20px;
+}
+.quetioin-area{
+  text-align: center;
+  align:center
+}
+
+.karuta {
+  color: white;
+  padding: 20px;
+  width: 250px;
+  border: solid 2px #ddd;
+  background: blue;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+
+.karutaData{
+  display:none;
+}
+
+
+.karutaListHolder{
+  margin-bottom:30px;
+}
+
+.karuta{
+  width:180px;
+  height:180px;
+  float:left;
+  margin:4px;
+
+  position:relative;
+  cursor:pointer;
+}
+
+.karutaFlip{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  border:1px solid #ddd;
+  background:url("img/background.jpg") no-repeat center center #f9f9f9;
+}
+
+.karutaFlip:hover{
+  border:1px solid #999;
+  -moz-box-shadow:0 0 30px #999 inset;
+  -webkit-box-shadow:0 0 30px #999 inset;
+  box-shadow:0 0 30px #999 inset;
+}
+.karutaFlip img{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-70px 0 0 -70px;
+}
+
+.karutaData{
+  display:none;
+}
+
+.karutaDataCollect{
+  display:none;
+}
+
+.karutaDescription{
+  font-size:11px;
+  padding:50px 10px 20px 20px;
+  font-style:italic;
+}
+
+.karutaURL{
+  font-size:10px;
+  font-weight:bold;
+  padding-left:20px;
+}
+
+.clear{
+  /* This class clears the floats */
+  clear:both;
+}

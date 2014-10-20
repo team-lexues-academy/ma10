@@ -1,2 +1,53 @@
-<h1>Karuta#index</h1>
-<p>Find me in app/views/karuta/index.html.erb</p>
+<!doctype html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery-ui-1.11.1.js"></script>
+  <script src="js/jquery.flip.min.js"></script>
+  <script src="js/karuta.js"></script>
+</head>
+<body>
+  <div class="header">
+  <img src="img/search.gif">
+  <h1>ドラえもんカルタ</h1>
+  </div>
+  <center>
+    <div id="quetioin-area">
+      <%= @question_text %>
+    </div>
+  </center>
+  <div id="karuta-list">
+    <center>
+    <table>
+      <tr>
+        <td>
+          <div class="karuta"><%= @answer_text[1] %></div>
+          <div class="karutaData"><%= @answer_text[2] %></div>
+        </td>
+        <td>
+          <div class="karuta">甘酸っぱい<img src="img/flip.png"></div>
+          <div class="karutaData">え？<img src="img/wrong.png"></div>
+        </td>
+        <td>
+          <div class="karuta">おおむね赤<img src="img/hi.png"></div>
+          <div class="karutaData">え？<img src="img/wrong.png"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="karuta">なつみかん<img src="img/mello.png"></div>
+          <div class="karutaData">え？<img src="img/wrong.png"></div>
+        </td>
+        <td>
+          <div class="karuta">かなり酸っぱいと思う<img src="img/run.png"></div>
+          <div class="karutaData">え？<img src="img/wrong.png"></div>
+        </td>
+        <td>
+          <div class="karuta">たいてい黄色<img src="img/sleep.png"></div>
+          <div class="karutaData">え？<img src="img/wrong.png"></div>
+        </td>
+      </tr>
+    </table>
+    </center>
+  </div>
+</body>
