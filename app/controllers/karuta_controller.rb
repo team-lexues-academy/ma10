@@ -1,0 +1,2 @@
+class KarutaController < ApplicationController
+end

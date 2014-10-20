@@ -1,0 +1,2 @@
+module KarutaHelper
+end
