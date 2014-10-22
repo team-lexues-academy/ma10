@@ -13,10 +13,20 @@
 
 ActiveRecord::Schema.define(version: 20141022093137) do
 
+  create_table "api_requests", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
     t.string   "provider"
     t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doramon_questions", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
