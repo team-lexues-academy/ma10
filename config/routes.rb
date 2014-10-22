@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   	get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
      end
   
+  #callback routing
+  devise_for :users, controllers: { 
+  	omniauth_callbacks: "some_dir/omniauth_callbacks" 
+     }
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
