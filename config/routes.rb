@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   	get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
      end
 
-  #callback routing
+  #callback routing (remove this when doing [ $ rails g model..])
   devise_for :users, controllers: {
   	omniauth_callbacks: "some_dir/omniauth_callbacks"
      }
