@@ -16,8 +16,9 @@ Rails.application.routes.draw do
 
   #callback routing (remove this when doing [ $ rails g model..])
   devise_for :users, controllers: {
-  	omniauth_callbacks: "some_dir/omniauth_callbacks"
-     }
+    omniauth_callbacks: "some_dir/omniauth_callbacks",
+    rgistrations:       "some_dir/registrations"
+   }
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
