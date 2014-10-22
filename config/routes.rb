@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  resources :users
   # You can have the root of your site routed with "root"
   root 'karuta#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  get '/auth/:provider/callback' => 'sessions#create'
+  get '/signin' => 'sessions#new', :as => :signin
+  get '/signout' => 'sessions#destroy', :as => :signout
+  get '/auth/failure' => 'sessions#failure'
 
   #callback routing (remove this when doing [ $ rails g model..])
   #devise_for :users, :controllers => {
