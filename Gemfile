@@ -11,13 +11,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-<<<<<<< HEAD
-#DB for user
-gem 'devise'
-gem 'omniauth-twitter'
-
-=======
->>>>>>> parent of 305b260... added devise to gemfile
 # Twitter Bootstrap 3.0
 gem 'bootstrap-sass', '3.0.2.0'
 gem 'jquery-ui-rails'
