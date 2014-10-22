@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   # Devise sign in and signout
-  devise_scope :user do
-  	get 'sign_in',  to: 'users/sessions#new',     as: :new_user_session
-  	get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
-     end
+  #devise_scope :user do
+  #	get 'sign_in',  to: 'users/sessions#new',     as: :new_user_session
+  #	get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
+  #   end
 
   #callback routing (remove this when doing [ $ rails g model..])
   #devise_for :users, controllers: {
@@ -66,8 +66,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-    namespace :admin do
-    resources :users
-  end
 
 end
