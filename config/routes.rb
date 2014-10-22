@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     rgistrations:       "some_dir/registrations"
    }
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
+  # Examprele of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
@@ -65,5 +65,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+    namespace :admin do
+    resources :users
+  end
 
 end
