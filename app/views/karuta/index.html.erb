@@ -7,6 +7,11 @@
   <script src="js/karuta.js"></script>
 </head>
 <body>
+  <% if user_signed_in? %>
+  <span><%= link_to 'ログアウト', destroy_user_session_path %></span>
+  <% else %>
+  <span><%= link_to "Twitterでログインする", user_omniauth_authorize_path(:twitter) %></span>
+  <% end %>
   <div class="header">
   <%= image_tag("search.gif") %>
   <h1>ドラえもんカルタ</h1>
