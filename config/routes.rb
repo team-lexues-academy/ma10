@@ -15,7 +15,7 @@ Rails.application.routes.draw do
      end
 
   #callback routing (remove this when doing [ $ rails g model..])
-  devise_for :users, controllers: {
+  cdevise_for :users, controllers: {
     omniauth_callbacks: "some_dir/omniauth_callbacks",
     rgistrations:       "some_dir/registrations"
    }
