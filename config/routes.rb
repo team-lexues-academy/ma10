@@ -15,10 +15,10 @@ Rails.application.routes.draw do
      end
 
   #callback routing
-  #devise_for :users, controllers: {
-  #	omniauth_callbacks: "some_dir/omniauth_callbacks"
-  #   }
-  
+  devise_for :users, controllers: {
+  	omniauth_callbacks: "some_dir/omniauth_callbacks"
+     }
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
