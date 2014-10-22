@@ -6,11 +6,9 @@ class SomeDir::RegistrationsController < Devise::RegistrationsController
   end
 
   protected
-    #
     # このメソッドを次のようにオーバーライドすることで
     # 保存される前の @user に authentication を持たせることができる。
     # @user が保存されれば authentication も保存される。
-    #
     def build_resource(*args)
       super
        if session[:omniauth]
