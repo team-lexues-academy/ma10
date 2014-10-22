@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 #DB for user
 gem 'devise'
+gem 'omniauth-twitter'
 
 # Twitter Bootstrap 3.0
 gem 'bootstrap-sass', '3.0.2.0'
