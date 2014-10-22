@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,11 +8,6 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  # Devise sign in and signout
-  #devise_scope :user do
-  #	get 'sign_in',  to: 'users/sessions#new',     as: :new_user_session
-  #	get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
-  #   end
 
   #callback routing (remove this when doing [ $ rails g model..])
   #devise_for :users, controllers: {
