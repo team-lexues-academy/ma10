@@ -8,16 +8,6 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  #Devise instruction for login
-  devise_scope :user do
-     get 'sign_in',  to: 'users/sessions#new',	   as: :new_user_session
-     get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
-   end
-
-  devise_for :users, controllers: {
-    omniauth_callbacks: "some_dir/omniauth_callbacks",
-    rgistrations:       "some_dir/registrations"
-  }
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
