@@ -28,5 +28,6 @@ class SomeDir::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         session[:omniauth] = omniauth
         redirect_to new_user_registration_path, notice: "必要な項目を入力してね。"
+			end
     end
 end
