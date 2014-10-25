@@ -4,7 +4,10 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'a85b4a19894f4329ef7bc05bd7c323dc3cf8504e1e08e58798d3c42248dd5a3ce98a1bd0d0fbbc22c6aa08bff36e10a0b1178e79376cd90c940f74e1ed8b86e9'
+  # config.secret_key = '1ea9cc9cb15a98b80a237c23d5b241485f72d15813e9308bb7e9f7074e5ac7846af0c8923490700b45e91af871d9647289bdacfa61c82fdd7de5007a9e73895f'
+
+  #Twitter API
+  config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET'], display: 'popup'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -97,7 +100,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'b64d99b0bb28220763d0def176626b2cd71db16d9171677fca1fc4eb5de385ebdf8a215d6178e73efaaf9e4788f002df30e23ab7dadbe2b660d943bc5ce4900e'
+  # config.pepper = '0cb29bd19f0c05449c4e1f4193c5d8a4aeea3fcaf9f48bc7a56b362242df7618ee2addc93c0a143c3812dfd709816000131acb5e95508882722de58df3bf9d55'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
