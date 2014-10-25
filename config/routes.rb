@@ -8,12 +8,12 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  devise_for :users, :controllers => do
-    :sessions      => 'users/sessions'
-    :registrations => 'users/registrations'
-    :passwords     => 'users/passwords'
-    :omniauth_callbacks => 'users/omniauth_callbacks'
-   end
+#  devise_for :users, :controllers => do
+#    :sessions      => 'users/sessions'
+#    :registrations => 'users/registrations'
+#    :passwords     => 'users/passwords'
+#    :omniauth_callbacks => 'users/omniauth_callbacks'
+#   end
 end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
