@@ -10,14 +10,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-   def new
+  def new
   	@user =Users.new
   end
 
-  def create 
+  def create
   	@user = User.new(params[:user])
   	if @user.save
-  		flash[:notice] = "Successfully created subdomain"
+  		flash[:notice] = "Successfully created account"
   		redirect_to @user
   	else
   		render :action => 'new'
@@ -30,10 +30,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-#    @user = User.find(params[:subdomain])
-#    if @user.update_attributes(params[:user])
-#      redirect_to @user
-#    else
-     redirect_to @user
+    redirect_to @user
   end
 end
