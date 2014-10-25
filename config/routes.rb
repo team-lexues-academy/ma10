@@ -12,17 +12,10 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new', :as => :signin
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
-
-  #callback routing (remove this when doing [ $ rails g model..])
-  #devise_for :users, :controllers => {
-#    :sessions       => "users/sessions",
-#    :registrations  => "users/registrations",
-#    :passwords      => "users/passwords",
-#    :omniauth_callbacks => "users/omniauth_callbacks"
-#  }
 end
 
-  # Examprele of named route that can be invoked with purchase_url(id: product.id)
+  # Example of named route that can be invoked with purchase_url(id: product.id)
+  
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
