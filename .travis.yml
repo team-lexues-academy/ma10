@@ -1,3 +1,6 @@
 langurage: ruby
 rvm:
   - 2.1.2
+notifications:
+  webhooks:
+    - https://idobata.io/hook/travis_ci/eb5e41fc-5862-4b18-87e8-b1f60d9cc66a
