@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   devise_for :users, :controllers => do
-    :sessions      => 'users/sessions',
-    :registrations => 'users/registrations',
-    :passwords     => 'users/passwords',
+    :sessions      => 'users/sessions'
+    :registrations => 'users/registrations'
+    :passwords     => 'users/passwords'
     :omniauth_callbacks => 'users/omniauth_callbacks'
    end
 end
