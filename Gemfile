@@ -11,6 +11,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+#DB for user
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 # Twitter Bootstrap 3.0
 gem 'bootstrap-sass', '3.0.2.0'
 gem 'jquery-ui-rails'

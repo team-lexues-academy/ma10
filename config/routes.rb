@@ -1,14 +1,25 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
   root 'karuta#index'
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_scope :user do
+    get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+#  devise_for :users, :controllers => do
+#    :sessions      => 'users/sessions'
+#    :registrations => 'users/registrations'
+#    :passwords     => 'users/passwords'
+#    :omniauth_callbacks => 'users/omniauth_callbacks'
+#   end
+end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
+
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
@@ -53,5 +64,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-end
