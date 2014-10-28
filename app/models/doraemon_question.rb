@@ -1,7 +1,9 @@
 #しつもん！ドラえもん から問題と答えを取得する
 class DoraemonQuestion
   def question
-    api_response.elements['response/result/doc/Body']
+    require 'pry'
+    binding.pry
+    api_response["response"]["result"]["doc"][0]["Body"]
   end
 
   def answer
@@ -18,7 +20,7 @@ class DoraemonQuestion
   end
 
   def get_answer
-    body = api_response.elements['response/result/doc[2]/Body']
+    body = api_response["response"]["result"]["doc"][1]["Body"]
     body_splited = body.to_s.split('　')
   end
 end
