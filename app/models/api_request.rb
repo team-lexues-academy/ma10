@@ -1,6 +1,7 @@
 class ApiRequest
-  require 'rexml/document'
-  require 'open-uri'
+  require 'net/http'
+  require 'uri'
+  require 'json'
 
   def response
     key = ENV["ASAHI_KENSAKU_API"]
