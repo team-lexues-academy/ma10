@@ -1,8 +1,6 @@
 #しつもん！ドラえもん から問題と答えを取得する
 class DoraemonQuestion
   def question
-    require 'pry'
-    binding.pry
     api_response["response"]["result"]["doc"][0]["Body"]
   end
 
