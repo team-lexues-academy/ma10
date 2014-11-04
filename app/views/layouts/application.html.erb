@@ -5,23 +5,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-   <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-     <div class="container">
-      <% if user_signed_in? %>
-        <%= link_to "Sign out", destroy_user_session_path %>
-      <% else %>
-        <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-      <% end %>
-      <div class="alert alert-info fade in">
-        <%= notice %>
-      </div>
-      <div class="alert alert-info fade in">
-        <%= alert %>
-      </div>
-    </div>
-   </header>
 
   <%= yield %>
 

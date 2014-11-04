@@ -1,3 +1,28 @@
-<div content>
-  <img src="<%= image_path("chi-tan-home-ldef.png") %>" width="100%"; height="100%">
-</div>
+  <div class="container">
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>ちーたんかるた</h1>
+      <p class="lead">僕と一緒に発掘しようよ</p>
+      <p class="lead">〜モードを選んでね〜</p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-lg-7">
+        <img src ="assets/fight.jpg">
+      </div>
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
+        <img src ="assets/dig.jpg">
+      </div>
+    </div>
+  </div>
+    <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path %>
+    <% else %>
+      <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+    <% end %>
+    <div class="alert alert-info fade in">
+      <%= notice %>
+    </div>
