@@ -11,24 +11,14 @@ class KarutaController < ApplicationController
   end
 
   def level1
-    doc = DoraemonQuestion.new
-
-    # 質問を取得
-    @question = doc.question
-
-    # 答えを取得
-    @answer = doc.answer
-    @answer_detail = doc.answer_detail
+    index
   end
 
   def level2
-    doc = DoraemonQuestion.new
+    index
+  end
 
-    # 質問を取得
-    @question = doc.question
-
-    # 答えを取得
-    @answer = doc.answer
-    @answer_detail = doc.answer_detail
+  def level3
+    index
   end
 end
