@@ -21,4 +21,8 @@ class KarutaController < ApplicationController
   def level3
     index
   end
+
+  def level4
+    index
+  end
 end
