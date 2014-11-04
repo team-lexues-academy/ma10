@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+
+  get '/level1' => 'karuta#level1'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 #  devise_for :users, :controllers => do
