@@ -5,7 +5,7 @@ class DoraemonQuestion
   end
 
   def question
-    @doc[0]["Body"]
+    get_question[1]
   end
 
   def answer
@@ -14,6 +14,16 @@ class DoraemonQuestion
 
   def answer_detail
     get_answer[2]
+  end
+
+  def get_question
+    question = @doc[0]["Body"]
+    question.to_s.split('　')
+  end
+
+  def get_answer
+    answer = @doc[1]["Body"]
+    answer.to_s.split('　')
   end
 
   private
@@ -48,10 +58,5 @@ class DoraemonQuestion
   def rand_date(year)
    day= rand(30) + 1
    return year + '-*-' + day.to_s
-  end
-
-  def get_answer
-    answer = @doc[1]["Body"]
-    answer.to_s.split('　')
   end
 end
