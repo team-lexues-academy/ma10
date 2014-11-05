@@ -20,34 +20,18 @@
     <center>
 
     <table>
-      <tr>
+      <% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
+      <% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
+      <% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
+      <% answer_list.each_with_index do |answer,i| %>
+        <% if i == 3 %>
+        <tr>
+        <% end %>
         <td>
-          <div class="karuta"><%= @answer %></div>
-          <div class="karutaData"><%= @answer_detail %></div>
+          <div class="karuta"><%= answer %><%= image_tag(img_list[i]) %></div>
+          <div class="karutaData"><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></div>
         </td>
-        <td>
-          <div class="karuta">甘酸っぱい<%= image_tag("flip.png") %></div>
-          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
-        </td>
-        <td>
-          <div class="karuta">おおむね赤<%= image_tag("hi.png") %></div>
-          <div class="karutaData">え？  <%= image_tag("wrong.png") %></div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="karuta">なつみかん<%= image_tag("mello.png") %></div>
-          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
-        </td>
-        <td>
-          <div class="karuta">かなり酸っぱいと思う<%= image_tag("run.png") %></div>
-          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
-        </td>
-        <td>
-          <div class="karuta">たいてい黄色<%= image_tag("sleep.png") %></div>
-          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
-        </td>
-      </tr>
+      <% end %>
     </table>
     </center>
   </div>
