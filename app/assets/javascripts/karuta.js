@@ -14,6 +14,5 @@ $(document).ready(function(){
       });
       elem.data('flipped',true);
     }
-    location.reload();
   });
 });

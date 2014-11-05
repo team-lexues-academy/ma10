@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/level2' => 'karuta#level2'
   get '/level3' => 'karuta#level3'
   get '/level4' => 'karuta#level4'
+  get '/karuta' => 'karuta#karuta'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
