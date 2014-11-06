@@ -5,25 +5,25 @@ class DoraemonQuestion
   end
 
   def question
-    question = Hash.new([])
+    question = []
     (0..9).each do |num|
-      question[num] = get_question(num)
+      question << get_question(num)
     end
     return question
   end
 
   def answer
-    answer = Hash.new([])
+    answer = []
     (0..9).each do |num|
-       answer[num] = get_answer(num)[1]
+       answer << get_answer(num)[1]
     end
     return answer
   end
 
   def answer_detail
-    answer_detail = Hash.new([])
+    answer_detail = []
     (0..9).each do |num|
-       answer_detail[num] = get_answer(num)[2]
+       answer_detail << get_answer(num)[2]
     end
     return answer_detail
   end
