@@ -5,25 +5,39 @@ class DoraemonQuestion
   end
 
   def question
-    get_question[1]
+    question = Hash.new([])
+    (0..4).each do |num|
+       question[num] = get_question(num)
+    end
+    return question
   end
 
   def answer
-    get_answer[1]
+    answer = Hash.new([])
+    (0..4).each do |num|
+       answer[num] = get_answer(num)[1]
+    end
+    return answer
   end
 
   def answer_detail
-    get_answer[2]
+    answer_detail = Hash.new([])
+    (0..4).each do |num|
+       answer_detail[num] = get_answer(num)[2]
+    end
+    return answer_detail
   end
 
-  def get_question
-    question = @doc[0]["Body"]
-    question.to_s.split('　')
+  def get_question(quetion_num)
+    question_request_num = quetion_num * 2 # 偶数
+    question = @doc[question_request_num]["Body"]
+    question.to_s.split('＊').first
   end
 
-  def get_answer
-    answer = @doc[1]["Body"]
-    answer.to_s.split('　')
+  def get_answer(answer_num)
+    answer_request_num = answer_num * 2 + 1 # 奇数
+    answer = @doc[answer_request_num]["Body"]
+    answer.to_s.split('　') # 0 space ,1 answer ,2 answer_detail
   end
 
   private
