@@ -4,28 +4,12 @@ class DoraemonQuestion
     @doc = get_doc + get_doc #get_docは１回で５問取得する
   end
 
-  def question
-    question = []
-    (0..9).each do |num|
-      question << get_question(num)
-    end
-    return question
-  end
-
-  def answer
-    answer = []
-    (0..9).each do |num|
-       answer << get_answer(num)[1]
-    end
-    return answer
-  end
-
-  def answer_detail
-    answer_detail = []
-    (0..9).each do |num|
-       answer_detail << get_answer(num)[2]
-    end
-    return answer_detail
+  def doc
+    doc = Hash.new({})
+    (0..9).each{ |num|
+      doc[num] = [get_question(num), get_answer(num)[1], get_answer(num)[2]]
+    }
+    doc
   end
 
   def get_question(quetion_num)
