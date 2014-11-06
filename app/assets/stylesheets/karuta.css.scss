@@ -3,12 +3,12 @@ body{
   padding: 0;
 }
 
-h1{
-  background: blue;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+html {
+background: url(bg.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 img{
@@ -96,4 +96,7 @@ img{
 .clear{
   /* This class clears the floats */
   clear:both;
+}
+.select-top > img{
+  width: 100%;
 }
