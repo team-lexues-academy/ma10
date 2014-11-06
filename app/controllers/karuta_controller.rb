@@ -7,7 +7,6 @@ class KarutaController < ApplicationController
 
     # 答えを取得
     @answer = doc.answer
-    binding.pry
     @answer_detail = doc.answer_detail
   end
 

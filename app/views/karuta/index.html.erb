@@ -15,7 +15,7 @@
   <div id="question-karuta">
   <center>
     <div id="quetioin-area">
-      <%= @question %>
+      <%= @question[0] %>
     </div>
   </center>
 
@@ -23,8 +23,8 @@
     <center>
     <div id="result"></div>
       <table>
-      <% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
-      <% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
+      <% answer_list = [ @answer[0], @answer[1], @answer[2], @answer[3], @answer[4], @answer[5] ] %>
+      <% answer_detail_list = [ @answer_detail[0], 'え？', 'え？', 'え？', 'え？', 'え？'] %>
       <% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
       <% answer_list.each_with_index do |answer,i| %>
         <% if i == 3 %>

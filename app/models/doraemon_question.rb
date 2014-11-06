@@ -1,20 +1,20 @@
 #しつもん！ドラえもん から問題と答えを取得する
 class DoraemonQuestion
   def initialize
-    @doc = get_doc
+    @doc = get_doc + get_doc #get_docは１回で５問取得する
   end
 
   def question
     question = Hash.new([])
-    (0..4).each do |num|
-       question[num] = get_question(num)
+    (0..9).each do |num|
+      question[num] = get_question(num)
     end
     return question
   end
 
   def answer
     answer = Hash.new([])
-    (0..4).each do |num|
+    (0..9).each do |num|
        answer[num] = get_answer(num)[1]
     end
     return answer
@@ -22,7 +22,7 @@ class DoraemonQuestion
 
   def answer_detail
     answer_detail = Hash.new([])
-    (0..4).each do |num|
+    (0..9).each do |num|
        answer_detail[num] = get_answer(num)[2]
     end
     return answer_detail
