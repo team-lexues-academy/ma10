@@ -27,8 +27,8 @@ img{
   width: 250px;
   border: solid 2px #ddd;
   background: #9fac2d;
-  -webkit-box-shadow: 0 0 10px #fff;
-  box-shadow: 0 0 10px #fff;
+  -webkit-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
 }
 
 
@@ -42,10 +42,10 @@ img{
 }
 
 .karuta{
-  width:180px;
-  height:180px;
+  width:270px;
+  height:270px;
   float:left;
-  margin:4px;
+  margin:10px;
 
   position:relative;
   cursor:pointer;
@@ -59,6 +59,17 @@ img{
   height:100%;
   border:1px solid #ddd;
   background:url("img/background.jpg") no-repeat center center #f9f9f9;
+}
+
+.jumbotron {
+  text-align: center;
+  color: #eee;
+  background-color: #9fac2d;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
 }
 
 .karutaFlip:hover{
