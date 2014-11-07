@@ -5,7 +5,7 @@ class KarutaController < ApplicationController
   def doraemon
     doraemon = DoraemonQuestion.new
     doc = doraemon.doc
-    binding.pry
+    #binding.pry
     respond_to do |format|
       format.html { render nothing: true }
       format.json { render json: doc.to_json }
