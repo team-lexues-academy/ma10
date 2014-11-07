@@ -10,3 +10,9 @@ $(function() {
     }
   });
 });
+
+$.post("karuta/doraemon.json",
+  function(data){
+    console.log(data);
+  }
+);
