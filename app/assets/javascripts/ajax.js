@@ -13,13 +13,14 @@ $(function() {
 });
 
 var result ='';
+var question='';
 $.post("karuta/doraemon.json",
   function(data){
     result += '<table>';
     result += '<tr>';
     result += '<td>';
-    result += '<div class="karuta"><%= @answer %></div>';
-    result += '<div class="karutaData"><%= @answer_detail %></div>';
+    result += '<div class="karuta">' + data["0"][1] + '</div>';
+    result += '<div class="karutaData">' + data["0"][2] + '</div>';
     result += '</td>';
     result += '<td>';
     result += '<div class="karuta">甘酸っぱい<%= image_tag("flip.png") %></div>';
@@ -27,10 +28,12 @@ $.post("karuta/doraemon.json",
     result += '</td>';
     result += '</tr>';
     result += '</table>';
-    result += data;
+    question += data["0"][0];
 
     console.log(data);
     console.log(result);
     $("#result").append(result);
+    $("#question").append(question);
+
   }
 );
