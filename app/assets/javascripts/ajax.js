@@ -33,7 +33,7 @@ $.post("karuta/doraemon.json",
     console.log(data);
     console.log(result);
     $("#result").append(result);
-    $("#question").append(question);
+    $("#quetioin-area").append(question);
 
   }
 );
