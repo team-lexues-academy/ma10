@@ -27,7 +27,8 @@ img{
   width: 250px;
   border: solid 2px #ddd;
   background: #9fac2d;
-  box-shadow: 10px 10px 5px #888888;
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #fff;
 }
 
 
