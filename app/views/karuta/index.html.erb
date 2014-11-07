@@ -7,11 +7,10 @@
   <script src="js/karuta.js"></script>
 </head>
 <body>
-  <center>
-    <div id="quetioin-area">
-      <%= @question %>
+    <div id="quetioin-area" class="jumbotron">
+      <h2>＊　質問！　＊</h2>
+      <h3><%= @question %></h3>
     </div>
-  </center>
   <div id="karuta-list">
     <center>
 
@@ -24,8 +23,8 @@
         <tr>
         <% end %>
         <td>
-          <div class="karuta"><%= answer %><%= image_tag(img_list[i]) %></div>
-          <div class="karutaData"><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></div>
+          <div class="karuta"><h3><%= answer %><%= image_tag(img_list[i]) %></h3></div>
+          <div class="karutaData"><p><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></p></div>
         </td>
       <% end %>
     </table>

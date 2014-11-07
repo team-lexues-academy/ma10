@@ -13,11 +13,25 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  color: #eee;
+  background-color: #9fac2d;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
 }
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
+}
+
+#chi-tan {
+  position: fixed !important;
+	position: absolute;
+	bottom: 0px;
+  right:0px;
+  z-index: -1;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
