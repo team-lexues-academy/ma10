@@ -16,6 +16,9 @@
         <img src ="assets/dig.jpg">
       </div>
     </div>
+    <div id='chi-tan'>
+      <%= image_tag('search.gif') %>
+    </div>
   </div>
     <% if user_signed_in? %>
       <%= link_to "Sign out", destroy_user_session_path %>
@@ -24,4 +27,4 @@
     <% end %>
     <div class="alert alert-info fade in">
       <%= notice %>
-    </div>
+  </div>
