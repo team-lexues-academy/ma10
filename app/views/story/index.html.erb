@@ -1,0 +1,126 @@
+
+		<div id="container" class="container">
+
+			<div class="bb-custom-wrapper">
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item" id="item1">
+							<div id="quetioin-area" class="jumbotron">
+							<div class="content">
+							<div class="scroller">
+								<h2>＊　質問！　＊</h2>
+								<h3><%= @question %></h3>
+							</div>
+							<div id="karuta-list">
+								<center>
+								<table>
+									<% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
+									<% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
+									<% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
+									<% answer_list.each_with_index do |answer,i| %>
+										<% if i == 3 %>
+										<tr>
+										<% end %>
+										<td>
+											<div class="karuta"><h3><%= answer %><%= image_tag(img_list[i]) %></h3></div>
+											<div class="karutaData"><p><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></p></div>
+										</td>
+									<% end %>
+								</table>
+								</center>
+							</div>
+						</div>
+					</div>
+				</div>
+
+					<div class="bb-item" id="item2">
+						<div id="quetioin-area" class="jumbotron">
+							<div class="content">
+							<div class="scroller">
+							<h2>＊　質問！　＊</h2>
+							<h3><%= @question %></h3>
+						</div>
+						<div id="karuta-list">
+							<center>
+							<table>
+								<% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
+								<% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
+								<% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
+								<% answer_list.each_with_index do |answer,i| %>
+									<% if i == 3 %>
+									<tr>
+									<% end %>
+									<td>
+										<div class="karuta"><h3><%= answer %><%= image_tag(img_list[i]) %></h3></div>
+										<div class="karutaData"><p><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></p></div>
+									</td>
+								<% end %>
+							</table>
+							</center>
+						</div>
+					</div>
+				</div>
+				</div>
+					<div class="bb-item" id="item3">
+						<div id="quetioin-area" class="jumbotron">
+							<h2>＊　質問！　＊</h2>
+							<h3><%= @question %></h3>
+						</div>
+						<div id="karuta-list">
+							<center>
+							<table>
+								<% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
+								<% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
+								<% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
+								<% answer_list.each_with_index do |answer,i| %>
+									<% if i == 3 %>
+									<tr>
+									<% end %>
+									<td>
+										<div class="karuta"><h3><%= answer %><%= image_tag(img_list[i]) %></h3></div>
+										<div class="karutaData"><p><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></p></div>
+									</td>
+								<% end %>
+							</table>
+							</center>
+						</div>
+				</div>
+				<div class="bb-item" id="item4">
+					<div id="quetioin-area" class="jumbotron">
+						<h2>＊　質問！　＊</h2>
+						<h3><%= @question %></h3>
+					</div>
+					<div id="karuta-list">
+						<center>
+						<table>
+							<% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
+							<% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
+							<% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
+							<% answer_list.each_with_index do |answer,i| %>
+								<% if i == 3 %>
+								<tr>
+								<% end %>
+								<td>
+									<div class="karuta"><h3><%= answer %><%= image_tag(img_list[i]) %></h3></div>
+									<div class="karutaData"><p><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></p></div>
+								</td>
+							<% end %>
+						</table>
+						</center>
+					</div>
+				</div>
+				<nav>
+					<span id="bb-nav-prev">&larr;</span>
+					<span id="bb-nav-next">&rarr;</span>
+				</nav>
+
+				<span id="tblcontents" class="menu-button">Activity</span>
+
+			</div>
+
+		<script>
+			$(function() {
+
+				Page.init();
+
+			});
+		</script>
