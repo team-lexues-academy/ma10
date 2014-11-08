@@ -24,7 +24,7 @@ $(function() {
         var other_answer_tag = '#answer' + i;
         var other_answer_detail_tag = '#answer-detail' + i;
         $(other_answer_tag).append(data[next_number][1]);
-        $(other_answer_detail_tag).append('残念＼(^o^)／');
+        $(other_answer_detail_tag).append('残念・・・<br><img src="/assets/wrong.png">');
       }
     }
     question += data[number][0];
