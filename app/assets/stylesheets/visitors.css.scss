@@ -31,7 +31,13 @@ body {
 	position: absolute;
 	bottom: 0px;
   right:0px;
-  z-index: -1;
+}
+
+#chi-tan img {
+  width: 100px;
+  &:hover {
+    width: 120px;
+  }
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
