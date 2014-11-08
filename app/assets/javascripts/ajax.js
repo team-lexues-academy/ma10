@@ -71,7 +71,7 @@ $(function() {
 
   $('.karuta').click(function() {
     if(cnt == 6){ //もしcntが6だったら
-      $(location).attr('href', 'http://www.city.tamba.hyogo.jp/site/chi-tan/');
+      $(location).attr('href', '/karuta/index.html');
     }
   });
 });
