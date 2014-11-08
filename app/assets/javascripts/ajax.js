@@ -2,6 +2,7 @@ $(function() {
   var cnt = 0; //cntを初期化
   var answer = Math.round( Math.random()*1 );
   var answer_tag = '#answer' + answer;
+  var answer_detail_tag = '#answer-detail' + answer;
 
 
   $.post("karuta/doraemon.json",apiCallback);
@@ -17,10 +18,13 @@ $(function() {
     for(i=0; i<2; i++ ){
       result += '<td>';
       if (answer == i ) {
-        $(answer_tag).append(data["0"][1]);
+        $(answer_tag).append(data[number][1]);
+        $(answer_detail_tag).append(data[number][2]);
       } else {
         var other_answer_tag = '#answer' + i;
-        $(other_answer_tag).append(data["1"][1]);
+        var other_answer_detail_tag = '#answer-detail' + i;
+        $(other_answer_tag).append(data[next_number][1]);
+        $(other_answer_detail_tag).append('残念＼(^o^)／');
       }
     }
     question += data[number][0];
@@ -64,11 +68,11 @@ $(function() {
       alert('正解');
       setTimeout(function(){
         $("#quetioin-area").empty();
-        $("#answer0").empty();
-        $("#answer1").empty();
+        $(".karuta").empty();
+        $(".karutaData").empty();
         $.post("karuta/doraemon.json",apiCallback);
         cnt = cnt + 1;  //cntが6でなければインクリメント
-      },2100);
+      },2000);
   });
 
   $('.karuta').click(function() {

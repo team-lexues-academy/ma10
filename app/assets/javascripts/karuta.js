@@ -16,7 +16,7 @@ $(document).ready(function(){
       setTimeout(function(){
         elem.revertFlip();
         elem.data('flipped',false)
-      },2000);
+      },1500);
     }
   });
 });
