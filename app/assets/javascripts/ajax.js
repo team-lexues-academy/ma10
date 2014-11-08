@@ -62,11 +62,13 @@ $(function() {
 
   $(answer_tag).click(function() {
       alert('正解');
-      $("#quetioin-area").empty();
-      $("#answer0").empty();
-      $("#answer1").empty();
-      $.post("karuta/doraemon.json",apiCallback);
-      cnt = cnt + 1;  //cntが6でなければインクリメント
+      setTimeout(function(){
+        $("#quetioin-area").empty();
+        $("#answer0").empty();
+        $("#answer1").empty();
+        $.post("karuta/doraemon.json",apiCallback);
+        cnt = cnt + 1;  //cntが6でなければインクリメント
+      },2100);
   });
 
   $('.karuta').click(function() {

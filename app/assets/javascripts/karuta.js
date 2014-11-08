@@ -13,6 +13,10 @@ $(document).ready(function(){
         }
       });
       elem.data('flipped',true);
+      setTimeout(function(){
+        elem.revertFlip();
+        elem.data('flipped',false)
+      },2000);
     }
   });
 });
