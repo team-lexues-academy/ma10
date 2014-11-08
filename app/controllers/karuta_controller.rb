@@ -1,12 +1,34 @@
 class KarutaController < ApplicationController
   def index
-    doc = DoraemonQuestion.new
+  end
 
-    # 質問を取得
-    @question = doc.question
+  def doraemon
+    doraemon = DoraemonQuestion.new
+    doc = doraemon.doc
+    #binding.pry
+    respond_to do |format|
+      format.html { render nothing: true }
+      format.json { render json: doc.to_json }
+    end
+  end
 
-    # 答えを取得
-    @answer = doc.answer
-    @answer_detail = doc.answer_detail
+  def level1
+    index
+  end
+
+  def level2
+    index
+  end
+
+  def level3
+    index
+  end
+
+  def level4
+    index
+  end
+
+  def karuta
+    index
   end
 end

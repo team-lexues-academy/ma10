@@ -1,29 +1,27 @@
 #しつもん！ドラえもん から問題と答えを取得する
 class DoraemonQuestion
   def initialize
-    @doc = get_doc
+    @doc = get_doc + get_doc #get_docは１回で５問取得する
   end
 
-  def question
-    get_question[1]
+  def doc
+    doc = Hash.new({})
+    (0..9).each{ |num|
+      doc[num] = [get_question(num), get_answer(num)[1], get_answer(num)[2]]
+    }
+    doc
   end
 
-  def answer
-    get_answer[1]
+  def get_question(quetion_num)
+    question_request_num = quetion_num * 2 # 偶数
+    question = @doc[question_request_num]["Body"]
+    question.to_s.split('＊').first
   end
 
-  def answer_detail
-    get_answer[2]
-  end
-
-  def get_question
-    question = @doc[0]["Body"]
-    question.to_s.split('　')
-  end
-
-  def get_answer
-    answer = @doc[1]["Body"]
-    answer.to_s.split('　')
+  def get_answer(answer_num)
+    answer_request_num = answer_num * 2 + 1 # 奇数
+    answer = @doc[answer_request_num]["Body"]
+    answer.to_s.split('　') # 0 space ,1 answer ,2 answer_detail
   end
 
   private

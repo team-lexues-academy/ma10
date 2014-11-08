@@ -109,6 +109,63 @@ img{
   /* This class clears the floats */
   clear:both;
 }
-.select-top > img{
+.select-top img{
   width: 100%;
+  z-index:-1;
+}
+.select-top p {
+  color: #666;
+  font-size: 50px;
+  margin-top: -50px;
+  text-align: center;
+  z-index: 100;
+}
+.no-content {
+  font-size: 50px;
+  margin-top: 50px;
+  text-align: center;
+  color: #eee;
+  background-color: #9fac2d;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+#story {
+  font-size: 50px;
+  text-align: center;
+  color: #eee;
+  background-color: #9fac2d;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.level {
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+  color: #eee;
+  background-color: #aaa;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+#back {
+  font-size: 20px;
+  text-align: center;
+  color: #eee;
+  background-color: #9fac2d;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 10px;
+  margin: 30px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
 }

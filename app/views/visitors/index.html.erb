@@ -9,16 +9,18 @@
     <!-- Example row of columns -->
     <div class="row">
 
-      <div class="col-md-5 col-md-offset-1 select-top">
-        <img src ="assets/fight.jpg">
+      <div class="col-md-4 col-md-offset-1 select-top">
+        <%= link_to image_tag('fight.jpg'), '/karuta.hmtl' %>
+        <p>バトル</p>
       </div>
-      <div class="col-md-offset-1 col-md-5 select-top">
-        <img src ="assets/dig.jpg">
+      <div class="col-md-offset-2 col-md-4 select-top">
+        <%= link_to image_tag('dig.jpg'), '/karuta/index.hmtl' %>
+        <p>ストーリー</p>
       </div>
     </div>
-    <!--<div id='chi-tan'>
-      <%= image_tag('top.png') %>
-    </div>-->
+    <div id='chi-tan'>
+      <a href="http://www.city.tamba.hyogo.jp/site/chi-tan/" target="_blank"><%= image_tag('top.png') %></a>
+    </div>
   </div>
     <% if user_signed_in? %>
       <%= link_to "Sign out", destroy_user_session_path %>
@@ -27,7 +29,4 @@
     <% end %>
     <div class="alert alert-info fade in">
       <%= notice %>
-  </div>
-  <div>
-    <a href="http://www.city.tamba.hyogo.jp/site/chi-tan/">ちーたんとは。。。<a>
   </div>

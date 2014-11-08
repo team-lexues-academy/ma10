@@ -1,33 +1,24 @@
-<!doctype html>
-<head>
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/jquery-ui-1.11.1.js"></script>
-  <script src="js/jquery.flip.min.js"></script>
-  <script src="js/karuta.js"></script>
-</head>
-<body>
-    <div id="quetioin-area" class="jumbotron">
-      <h2>＊　質問！　＊</h2>
-      <h3><%= @question %></h3>
-    </div>
-  <div id="karuta-list">
-    <center>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+    <div id='story'>ストーリーモード</div>
 
-    <table>
-      <% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
-      <% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
-      <% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
-      <% answer_list.each_with_index do |answer,i| %>
-        <% if i == 3 %>
-        <tr>
-        <% end %>
-        <td>
-          <div class="karuta"><h3><%= answer %><%= image_tag(img_list[i]) %></h3></div>
-          <div class="karutaData"><p><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></p></div>
-        </td>
-      <% end %>
-    </table>
-    </center>
+    <a href='/level1.html'><p class='level'>１階層（かいそう）</p></a>
+    <p class='level'>２階層（かいそう）</p>
+    <p class='level'>３階層（かいそう）</p>
+    <p class='level'>４階層（かいそう）</p>
+    <p class='level'>５階層（かいそう）</p>
+    <p class='level'>６階層（かいそう）</p>
+    <p class='level'>７階層（かいそう）</p>
+    <p class='level'>８階層（かいそう）</p>
+    <p class='level'>９階層（かいそう）</p>
+    <p class='level'>１０階層（かいそう）</p>
+    <p class='level'>１１階層（かいそう）</p>
   </div>
-</body>
+</div>
+<div class="row">
+  <div class="col-md-offset-5 col-md-2 col-md-offset-5">
+    <a href='/'>
+      <div id='back'>戻る</div>
+    </a>
+  </div>
+</div>

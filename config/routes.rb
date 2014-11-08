@@ -5,10 +5,18 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
   get 'karuta/index'
+  post 'karuta/doraemon'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_scope :user do
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+
+  get '/level1' => 'karuta#level1'
+  get '/level2' => 'karuta#level2'
+  get '/level3' => 'karuta#level3'
+  get '/level4' => 'karuta#level4'
+  get '/karuta' => 'karuta#karuta'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 #  devise_for :users, :controllers => do

@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery-ui-1.11.1.js"></script>
+  <script src="js/jquery.flip.min.js"></script>
+  <script src="js/karuta.js"></script>
+</head>
+<body>
+  <div class="header">
+  <%= image_tag("search.gif") %>
+  <h1>ドラえもんカルタ</h1>
+  </div>
+  <center>
+    <div id="quetioin-area">
+      <%= @question %>
+    </div>
+  </center>
+  <div id="karuta-list">
+    <center>
+
+    <table>
+      <tr>
+        <td>
+          <div class="karuta"><%= @answer %></div>
+          <div class="karutaData"><%= @answer_detail %></div>
+        </td>
+        <td>
+          <div class="karuta">甘酸っぱい<%= image_tag("flip.png") %></div>
+          <div class="karutaData">え？<img src="wrong.png"></div>
+        </td>
+        <td>
+          <div class="karuta">おおむね赤<%= image_tag("hi.png") %></div>
+          <div class="karutaData">え？  <%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">おおむね赤<%= image_tag("hi.png") %></div>
+          <div class="karutaData">え？  <%= image_tag("wrong.png") %></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="karuta">なつみかん<%= image_tag("mello.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">かなり酸っぱいと思う<%= image_tag("run.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">たいてい黄色<%= image_tag("sleep.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">おおむね赤<%= image_tag("hi.png") %></div>
+          <div class="karutaData">え？  <%= image_tag("wrong.png") %></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="karuta">なつみかん<%= image_tag("mello.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">かなり酸っぱいと思う<%= image_tag("run.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">たいてい黄色<%= image_tag("sleep.png") %></div>
+          <div class="karutaData">え？<%= image_tag("wrong.png") %></div>
+        </td>
+        <td>
+          <div class="karuta">おおむね赤<%= image_tag("hi.png") %></div>
+          <div class="karutaData">え？  <%= image_tag("wrong.png") %></div>
+        </td>
+      </tr>
+    </table>
+    </center>
+  </div>
+</body>
