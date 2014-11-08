@@ -120,3 +120,15 @@ img{
   text-align: center;
   z-index: 100;
 }
+.no-content {
+  font-size: 50px;
+  margin-top: 50px;
+  text-align: center;
+  color: #eee;
+  background-color: #9fac2d;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}

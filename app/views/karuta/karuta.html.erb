@@ -1,36 +1,8 @@
-<!doctype html>
-<head>
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/jquery-ui-1.11.1.js"></script>
-  <script src="js/jquery.flip.min.js"></script>
-  <script src="js/karuta.js"></script>
-  <script src="js/ajax.js"></script>
-  <script type="text/javascript" src="js/jquery.pjax.js"></script>
-</head>
-<body>
-  <center>
-    <div id="quetioin-area">
-      <%= @question %>
-    </div>
-  </center>
-  <div id="karuta-list">
-    <center>
-    <div id="result"></div>
-      <table>
-      <% answer_list = [ @answer, '甘酸っぱい', 'おおむね赤', 'なつみかん', 'かなり酸っぱいと思う', 'たいてい黄色' ] %>
-      <% answer_detail_list = [ @answer_detail, 'え？', 'え？', 'え？', 'え？', 'え？'] %>
-      <% img_list = %w{ wrong.png flip.png hi.png mello.png run.png sleep.png } %>
-      <% answer_list.each_with_index do |answer,i| %>
-        <% if i == 3 %>
-        <tr>
-        <% end %>
-        <td>
-          <div class="karuta"><%= answer %><%= image_tag(img_list[i]) %></div>
-          <div class="karutaData"><%= answer_detail_list[i] %><%= image_tag(img_list[0]) %></div>
-        </td>
-      <% end %>
-    </table>
-    </center>
+<div class="row">
+
+  <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+    <a href='/'>
+    <p class='no-content'>ごめんね。まだ作成中なんだ。</p>
+    </a>
   </div>
-</body>
+</div>
