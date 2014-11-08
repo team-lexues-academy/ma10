@@ -111,4 +111,12 @@ img{
 }
 .select-top img{
   width: 100%;
+  z-index:-1;
+}
+.select-top p {
+  color: #666;
+  font-size: 50px;
+  margin-top: -50px;
+  text-align: center;
+  z-index: 100;
 }
